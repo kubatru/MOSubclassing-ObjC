@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="did-TM-RVZ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="XHM-bQ-4LV">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="568" id="Vje-9M-mld"/>
+                                    <constraint firstAttribute="width" constant="320" id="bEQ-kj-B0X"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Vje-9M-mld"/>
+                                        <exclude reference="bEQ-kj-B0X"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="ZBl-jg-XwT"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="kVL-FK-xym"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0e-9R-eMH">
+                                <rect key="frame" x="149" y="510" width="22" height="22"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="WHc-jb-a4r"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="l0e-9R-eMH" secondAttribute="bottom" constant="36" id="4vl-gn-71j"/>
+                            <constraint firstItem="XHM-bQ-4LV" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="DWQ-NB-GEd"/>
+                            <constraint firstAttribute="centerX" secondItem="l0e-9R-eMH" secondAttribute="centerX" id="GPS-p2-CGc"/>
+                            <constraint firstItem="XHM-bQ-4LV" firstAttribute="centerX" secondItem="l0e-9R-eMH" secondAttribute="centerX" id="KfH-3H-Vbq"/>
+                            <constraint firstItem="XHM-bQ-4LV" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="nJj-l5-Pbi"/>
+                            <constraint firstItem="XHM-bQ-4LV" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="naq-K9-HzO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fao-0T-7lZ">
+                        <barButtonItem key="leftBarButtonItem" tag="1" title="Search Worker Tereza" id="N0G-4z-c7K">
+                            <connections>
+                                <action selector="btnPressed:" destination="vXZ-lx-hvc" id="Bbn-ml-pLU"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" tag="2" title="Show All" id="1Xi-sl-JS1">
+                            <connections>
+                                <action selector="btnPressed:" destination="vXZ-lx-hvc" id="WeK-84-Mgo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="addBtn" destination="l0e-9R-eMH" id="kku-Z3-czM"/>
+                        <outlet property="btn" destination="N0G-4z-c7K" id="zBC-A2-dAH"/>
+                        <outlet property="secondBtn" destination="1Xi-sl-JS1" id="5IH-d4-UFS"/>
+                        <outlet property="tableView" destination="XHM-bQ-4LV" id="UXZ-EC-mja"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="501" y="382"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NVA-CZ-4ek">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="did-TM-RVZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="R2L-Ap-Cvf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="zCL-Gk-j2f"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UDN-Bx-5hH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="123" y="382"/>
+        </scene>
+    </scenes>
+</document>
